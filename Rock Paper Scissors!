@@ -1,0 +1,24 @@
+string gameResult (string s)
+        {
+            //code here.
+            char a,b;
+            string res;
+            
+            a=s[0];
+            b=s[1];
+            
+            if(a==b)
+            {
+                res="DRAW";
+            }
+            else if((a=='R' && b=='S') || (a=='S' && b=='P') || (a=='P' && b=='R'))
+            {
+                res="A";
+            }
+            else
+            {
+                res="B";
+            }
+            
+            return res;
+        }
