@@ -1,0 +1,38 @@
+struct Node* deleteNode(struct Node *head_ref, int x)
+     {
+         int count=1;
+         struct Node* temp=head_ref;
+         while(temp!=0)
+         {
+             if(count==x)
+             {
+                 if(count==1)
+                 {
+                     head_ref=temp->next;
+                     temp->next->prev=0;
+                     free(temp);
+                     temp=0;
+                     break;
+                 }
+                 else if(temp->next==0)
+                 {
+                     temp->prev->next=0;
+                     temp->prev=0;
+                     free(temp);
+                     temp=0;
+                     break;
+                 }
+                 else
+                 {
+                     temp->prev->next=temp->next;
+                     temp->next->prev=temp->prev;
+                     free(temp);
+                     temp=0;
+                     break;
+                 }
+             }
+             temp=temp->next;
+             count++;
+         }
+         return head_ref;
+     }
