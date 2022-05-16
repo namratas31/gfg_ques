@@ -1,0 +1,10 @@
+void display(struct Node *head)
+ {
+    //add code here
+    struct Node *temp=head;
+    while(temp!=0)
+    {
+        printf("%d ",temp->data);
+        temp=temp->next;
+    }
+ }
