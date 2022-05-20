@@ -1,0 +1,21 @@
+void Rearrange(int a[], int n, int answer[])
+    {
+        sort(a,a+n);
+        
+        int i,j=0,k;
+        for(i=0;i<n;i=i+2)
+        {
+            answer[i]=a[j];
+            j++;
+        }
+        i=n-1;
+        if(i%2==0)
+        i--;
+        
+        for(k=i;k>=1;k=k-2)
+        {
+            answer[k]=a[j];
+            j++;
+        }
+        
+    }
