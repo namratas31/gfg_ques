@@ -1,0 +1,14 @@
+int countSquares(int N) {
+        // code here
+        int sum=0,i=1,count=0;
+        
+        while(sum<N)
+        {
+            sum=i*i;
+            i++;
+            if(sum<N)
+            count++;
+        }
+        
+        return count;
+    }
