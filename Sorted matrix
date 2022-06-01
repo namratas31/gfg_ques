@@ -1,0 +1,28 @@
+vector<vector<int>> sortedMatrix(int N, vector<vector<int>> Mat) {
+        // code here
+        int i,j,k=0;
+        vector<int> arr;
+        
+        for(i=0;i<N;i++)
+        {
+            for(j=0;j<N;j++)
+            {
+                arr.push_back(Mat[i][j]);
+                k++;
+            }
+        }
+        
+        sort(arr.begin(),arr.end());
+        
+        k=0;
+        for(i=0;i<N;i++)
+        {
+            for(j=0;j<N;j++)
+            {
+                Mat[i][j]=arr[k];
+                k++;
+            }
+        }
+        
+        return Mat;
+    }
