@@ -1,0 +1,14 @@
+long long countElements(long long arr[], long long n) 
+    {
+        // Your code goes here
+        int count=1,val=arr[0];
+        for(int i=1;i<n;i++)
+        {
+            if(arr[i]>val)
+            {
+                count++;
+                val=arr[i];
+            }
+        }
+        return count;
+    }
