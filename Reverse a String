@@ -1,0 +1,19 @@
+string reverseWord(string str){
+    
+  //Your code here
+  int i=0,mid,n;
+  char temp;
+  while(str[i]!='\0')
+  {
+      i++;
+  }
+  n=i-1;
+  mid=i/2;
+  for(i=0;i<mid;i++)
+  {
+      temp=str[i];
+      str[i]=str[n-i];
+      str[n-i]=temp;
+  }
+  return str;
+}
