@@ -1,0 +1,15 @@
+int firstElementKTime(int a[], int n, int k)
+    {
+        map<int, int> mp;
+        int i;
+        
+        for(i=0;i<n;i++)
+        {
+            mp[a[i]]++;
+            
+            if(mp[a[i]]==k)
+            return a[i];
+        }
+        
+        return -1;
+    }
