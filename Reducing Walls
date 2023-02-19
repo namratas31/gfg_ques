@@ -1,0 +1,16 @@
+int ReducingWalls(int arr[], int n, int k)
+{
+    // Complete the function
+    int count=0;
+    int i;
+    
+    for(i=0;i<n;i++)
+    {
+        if(arr[i]>k)
+        {
+            count+=(arr[i]-1)/k;
+        }
+    }
+    
+    return count;
+}

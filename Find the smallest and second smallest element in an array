@@ -1,0 +1,32 @@
+vector<int> minAnd2ndMin(int a[], int n) {
+    
+    vector<int>result;
+    
+    int i;
+    int min1=INT_MAX;
+    int min2=INT_MAX;
+    
+    for(i=0;i<n;i++)
+    {
+        if(a[i]<min1)
+        {
+            min2=min1;
+            min1=a[i];
+        }
+        else if(a[i]<min2 && a[i]!=min1)
+        {
+            min2=a[i];
+        }
+    }
+    if(min2==INT_MAX)
+    {
+        result.push_back(-1);
+        result.push_back(-1);
+        return result;
+    }
+   else
+   {
+       result.push_back(min1);
+       result.push_back(min2);
+       return result;
+   }

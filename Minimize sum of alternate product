@@ -1,0 +1,14 @@
+long long altProduct(long long a[], long long n)
+{
+    // Your code goes here   
+    sort(a,a+n);
+    long long sum=0,i;
+    
+    for(i=0;i<n/2;i++)
+    {
+        sum+=a[i]*a[n-i-1];
+    }
+    
+    return sum;
+    
+}

@@ -1,0 +1,33 @@
+string getCrazy (string S)
+{
+    // your code here
+   
+    for(int i=1;i<S.length();i++)
+    {
+        if(isupper(S[0])!=0)
+        {
+            if(i%2==0)
+            {
+                S[i]=toupper(S[i]);
+            }
+            else
+            {
+                S[i]=tolower(S[i]);
+            }
+        }
+        else
+        {
+            if(i%2==0)
+            {
+                S[i]=tolower(S[i]);
+            }
+            else
+            {
+                S[i]=toupper(S[i]);
+            }
+        }
+    }
+    
+    return S;
+
+};

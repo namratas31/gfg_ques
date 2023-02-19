@@ -1,0 +1,7 @@
+long long int leftShops(long long int i, long long int L){
+        // code here
+        long long int n;
+        n=pow(2,L);
+        
+        return n-i;
+    }

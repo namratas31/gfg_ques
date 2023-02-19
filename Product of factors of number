@@ -1,0 +1,22 @@
+int factorProduct(int N) {
+        // code here
+        
+        long long int i,prod=1;
+        
+        long long int val=pow(10,9)+7;
+        
+        for(i=1;i<=sqrt(N);i++)
+        {
+            if(N%i==0)
+            {
+                prod=(prod%val)*i;
+                
+                if(N/i!=i)
+                {
+                    prod=(prod%val)*(N/i);
+                }
+            }
+        }
+        
+        return prod%val;
+    }

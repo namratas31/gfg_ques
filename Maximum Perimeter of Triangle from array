@@ -1,0 +1,14 @@
+int maxPerimeter(int arr[], int n){
+
+    // Complete the function
+    sort(arr,arr+n);
+    int i;
+    
+    for(i=n-1;i>=2;i--)
+    {
+        if(arr[i]<arr[i-1]+arr[i-2])
+        return arr[i]+arr[i-1]+arr[i-2];
+    }
+    
+    return -1;
+}

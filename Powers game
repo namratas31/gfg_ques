@@ -1,0 +1,26 @@
+vector<int> getFreq(int x, int n) {
+    // code here
+    
+    long long int i,arr[10]={0},sum=1,count;
+    string s;
+    vector<int>ans;
+    
+    for(i=1;i<=n;i++)
+    {
+        sum*=x;
+        s=to_string(sum);
+        count=0;
+        while(count<s.length())
+        {
+            arr[s[count]-48]++;
+            count++;
+        }
+    }
+    
+    for(i=0;i<10;i++)
+    {
+        ans.push_back(arr[i]);
+    }
+    
+    return ans;
+}

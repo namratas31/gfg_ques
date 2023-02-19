@@ -1,0 +1,19 @@
+void printTriangleDownwards(string str)
+    {
+        // Write Your Code here
+        int i;
+        
+        for(i=0;i<str.length();i++)
+        {
+            for(int j=str.length()-i-1;j>0;j--)
+            {
+                cout<<".";
+            }
+            
+            for(int k=0;k<i+1;k++)
+            {
+            cout<<str[k];
+            }
+            cout<<endl;
+        }
+    }

@@ -1,0 +1,11 @@
+int isMagic(int N) {
+        // code here
+        if(N%9==1)
+        {
+            return 1;
+        }
+        else
+       {
+            return 0;
+       }
+    }

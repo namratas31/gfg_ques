@@ -1,0 +1,16 @@
+int  minimum_difference(vector<int>nums){
+   	    // Code here
+        
+  sort(nums.begin(),nums.end());
+ 	int min=INT_MAX,i;
+ 	
+ 	for(i=0;i<nums.size()-1;i++)
+ 	{
+ 	    if((nums[i+1]-nums[i])<min)
+ 	    {
+ 	        min=nums[i+1]-nums[i];
+ 	    }
+ 	}
+ 	
+ 	return min;
+   	}    
