@@ -1,0 +1,20 @@
+string reverseString(string s)
+{
+    //code here.
+    int n=s.length(),i;
+    string ans="";
+    map<char,int>mp;
+    
+    for(i=n-1;i>=0;i--)
+    {
+        if(s[i]!=' ')
+        {
+            mp[s[i]]++;
+        
+            if(mp[s[i]]==1)
+            ans+=s[i];
+        }
+    }
+    
+    return ans;
+}

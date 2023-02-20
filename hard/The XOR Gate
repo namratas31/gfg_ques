@@ -1,0 +1,13 @@
+int xorGate(vector<int> arr,int N){
+        //code here
+        int x,i;
+        
+        x=arr[0];
+        
+        for(i=1;i<N;i++)
+        {
+            x^=arr[i];
+        }
+        
+        return x;
+    }

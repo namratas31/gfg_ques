@@ -1,0 +1,14 @@
+long long int MaximumIntegerValue(string S) {
+        // code here
+        long long int i,sum=0,len=S.length();
+        
+        for(i=0;i<len;i++)
+        {
+            if(((S[i]-48)*sum)>((S[i]-48)+sum))
+            sum=(S[i]-48)*sum;
+            else
+            sum=(S[i]-48)+sum;
+        }
+        
+        return sum;
+    }

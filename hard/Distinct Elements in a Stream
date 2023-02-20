@@ -1,0 +1,24 @@
+vector<int> maxDistinctNum(int arr[], int n)
+    {
+        // Complete the function
+        unordered_map<int,int>mp;
+        vector<int>ans;
+        
+        for(int i=0;i<n;i++)
+        {
+            if(arr[i]>0)
+            mp[arr[i]]++;
+            else
+            {
+                if(mp[abs(arr[i])]>1)
+                mp[abs(arr[i])]--;
+                else
+                mp.erase(abs(arr[i]));
+            }
+            
+            ans.push_back(mp.size());
+        }
+    
+        return ans;
+        
+    }

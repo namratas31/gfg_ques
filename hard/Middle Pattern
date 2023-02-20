@@ -1,0 +1,20 @@
+void printPattern(string s)
+{
+   //Your code here
+   int i,n,j;
+   string ans="";
+   n=s.length();
+   j=n/2;
+   
+   for(i=0;i<n;i++)
+   {
+       if(j==n)
+       {
+           j=0;
+       }
+       ans+=s[j];
+       j++;
+       
+       cout<<ans<<"$ ";
+   }
+}

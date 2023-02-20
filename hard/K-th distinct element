@@ -1,0 +1,22 @@
+int KthDistinct(vector<int>nums,int k){
+		    // Code here.
+		    int i;
+		    map<int,int>mp;
+		    
+		    for(i=0;i<nums.size();i++)
+		    {
+		        mp[nums[i]]++;
+		    }
+		    
+		    for(i=0;i<nums.size();i++)
+		    {
+		        if(mp[nums[i]]==1)
+		        {
+		            k--;
+		            if(k==0)
+		            return nums[i];
+		        }
+		    }
+		    
+		    return -1;
+		}

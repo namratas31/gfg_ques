@@ -1,0 +1,20 @@
+int kthDigit(int A,int B,int K){
+        // code here
+        long long int p=pow(A,B);
+        long long int i,n,count=0,m;
+        
+        string num;
+        num=to_string(p);
+        n=num.length();
+        
+        for(i=n-1;i>=0;i--)
+        {
+            count++;
+            if(count==K)
+            {
+                m=num[i]-48;
+                return m;
+            }
+        }
+        
+    }

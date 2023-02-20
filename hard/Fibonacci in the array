@@ -1,0 +1,29 @@
+int checkFib(long long arr[], int N)
+	{
+	    // Your code goes here
+	    long long i,x,y,p,q;
+	    int count=0;
+	    
+	    for(i=0;i<N;i++)
+	    {
+	        x=5*arr[i]*arr[i]-4;
+	        p=pow(x,0.5);
+	        
+	        if(p*p==x)
+	        {
+	            count++;
+	            continue;
+	        }
+	        
+	        y=5*arr[i]*arr[i]+4;
+	        q=pow(y,0.5);
+	        
+	        if(q*q==y)
+	        {
+	            count++;
+	        }
+	    }
+	    
+	    return count;
+	    
+	}

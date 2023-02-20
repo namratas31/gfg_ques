@@ -1,0 +1,31 @@
+int isGoodorBad(string S) {
+        // code here
+        int vow=0,con=0,i;
+        
+        for(i=0;i<S.length();i++)
+        {
+           if(S[i]=='a' || S[i]=='e' || S[i]=='i' || S[i]=='o' || S[i]=='u') 
+           {
+               vow++;
+               con=0;
+               if(vow>5)
+               return 0;
+           }
+           else if(S[i]=='?')
+           {
+               vow++;
+               con++;
+               if(con>3 || vow>5)
+               return 0;
+           }
+           else
+           {
+               con++;
+               vow=0;
+               if(con>3)
+               return 0;
+           }
+        }
+        
+        return 1;
+    }

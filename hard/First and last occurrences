@@ -1,0 +1,38 @@
+vector<int> find(int arr[], int n , int x )
+{
+    // code here
+    int i,first=-1,second=-1,flag=0;
+    vector<int>ind;
+    for(i=0;i<n;i++)
+    {
+        if(arr[i]==x)
+        {
+            if(flag==0)
+            {
+                first=i;
+                flag=1;
+            }
+            else
+            {
+                second=i;
+            }
+        }
+    }
+    if(first>=0 && second==-1)
+    {
+        second=first;
+    }
+    
+    if(first>=0)
+    {
+        ind.push_back(first);
+        ind.push_back(second);
+        return ind;
+    }
+    else
+    {
+        ind.push_back(-1);
+        ind.push_back(-1);
+        return ind;
+    }
+}

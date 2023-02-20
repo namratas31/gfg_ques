@@ -1,0 +1,64 @@
+string shortestPath (string S)
+    {
+        // your code here
+        int south=0,east=0,west=0,north=0,i;
+        string ans="";
+        
+        for(i=0;i<S.length();i++)
+        {
+            if(S[i]=='S')
+            {
+                if(north>0)
+                north--;
+                else
+                south++;
+            }
+            else if(S[i]=='N')
+            {
+                if(south>0)
+                south--;
+                else
+                north++;
+            }
+            else if(S[i]=='E')
+            {
+                if(west>0)
+                west--;
+                else
+                east++;
+            }
+            else if(S[i]=='W')
+            {
+                if(east>0)
+                east--;
+                else
+                west++;
+            }
+        }
+        
+        while(east!=0)
+        {
+        ans+='E';
+        east--;
+        }
+        
+        while(north!=0)
+        {
+            ans+='N';
+            north--;
+        }
+        
+        while(south!=0)
+        {
+            ans+='S';
+            south--;
+        }
+        
+        while(west!=0)
+        {
+            ans+='W';
+            west--;
+        }
+        
+        return ans;
+    }

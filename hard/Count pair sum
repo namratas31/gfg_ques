@@ -1,0 +1,19 @@
+int countPairs(int arr1[], int arr2[],  int m, int n, int x) 
+    { 
+        //code here.
+        set<int>a;
+        
+        int i;
+        
+        for(i=0;i<m;i++)
+        {
+            a.insert(x-arr1[i]);
+        }
+        
+        for(i=0;i<n;i++)
+        {
+            a.insert(arr2[i]);
+        }
+        
+        return m+n-a.size();
+    } 
