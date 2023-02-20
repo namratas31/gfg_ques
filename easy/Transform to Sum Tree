@@ -1,0 +1,25 @@
+ int sum(Node *node)
+    {
+        if(node==NULL)
+        {
+            return 0;
+        }
+        
+        int s=node->data+sum(node->right)+sum(node->left);
+        
+        return s;
+    }
+    
+    void toSumTree(Node *node)
+    {
+        // Your code here
+        if(node==NULL)
+        {
+            return;
+        }
+        
+        node->data=sum(node)-node->data;
+        
+        toSumTree(node->right);
+        toSumTree(node->left);
+    }

@@ -1,0 +1,40 @@
+ Node* segregate(Node *head) {
+        
+        // Add code here
+        Node *temp=head;
+        int countz=0,counto=0;
+        
+        while(temp!=NULL)
+        {
+            if(temp->data==0)
+            countz++;
+            else if(temp->data==1)
+            counto++;
+            
+            temp=temp->next;
+        }
+        
+        temp=head;
+        
+        while(temp!=NULL)
+        {
+            if(countz>0)
+            {
+                temp->data=0;
+                countz--;
+            }
+            else if(counto>0)
+            {
+                temp->data=1;
+                counto--;
+            }
+            else
+            {
+                temp->data=2;
+            }
+            
+            temp=temp->next;
+        }
+        
+        return head;
+    }

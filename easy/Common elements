@@ -1,0 +1,51 @@
+vector <int> commonElements (int A[], int B[], int C[], int n1, int n2, int n3)
+        {
+            //code here.
+            vector<int>ans;
+            map<int,int>mp;
+            set<int>s1;
+            set<int>s2;
+            set<int>s3;
+            int i;
+            
+            for(i=0;i<n1;i++)
+            {
+                s1.insert(A[i]);
+            }
+            
+            for(i=0;i<n2;i++)
+            {
+                s2.insert(B[i]);
+            }
+            
+            for(i=0;i<n3;i++)
+            {
+                s3.insert(C[i]);
+            }
+            
+            for(auto i:s1)
+            {
+                mp[i]++;
+            }
+            
+            for(auto i:s2)
+            {
+                mp[i]++;
+            }
+            
+            for(auto i:s3)
+            {
+                mp[i]++;
+            }
+            
+            for(auto i:mp)
+            {
+                if(i.second==3)
+                {
+                    ans.push_back(i.first);
+                }
+            }
+            
+            
+            return ans;
+        }

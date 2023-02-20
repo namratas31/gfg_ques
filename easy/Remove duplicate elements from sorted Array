@@ -1,0 +1,22 @@
+int remove_duplicate(int a[],int n){
+        // code here
+        int ans[n],i,j=0;
+        
+        for(i=0;i<n-1;i++)
+        {
+            if(a[i+1]!=a[i])
+            {
+                ans[j]=a[i];
+                j++;
+            }
+        }
+        
+        ans[j]=a[i];
+    
+        for(i=0;i<=j;i++)
+        {
+            a[i]=ans[i];
+        }
+        
+        return j+1;
+    }

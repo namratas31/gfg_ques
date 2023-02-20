@@ -1,0 +1,20 @@
+int repeatedSubtraction(int A,int B){
+        //code here
+        int temp,count=0;
+        
+        while(A!=0 && B!=0)
+        {
+            temp=min(A,B);
+            if(A>B)
+            {
+                A-=temp;
+            }
+            else
+            {
+                B-=temp;
+            }
+            count++;
+        }
+        
+        return count;
+    }

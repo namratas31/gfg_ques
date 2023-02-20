@@ -1,0 +1,22 @@
+ int maxDistance(int arr[], int n)
+    {
+    //Code here
+    unordered_map<int,int>mp;
+    int i,max=0,temp;
+    
+    for(i=0;i<n;i++)
+    {
+        if(mp.find(arr[i])==mp.end())
+        {
+            mp[arr[i]]=i;
+        }
+        else
+        {
+            temp=i-mp[arr[i]];
+            if(temp>max)
+            max=temp;
+        }
+    }
+    
+    return max;
+    }

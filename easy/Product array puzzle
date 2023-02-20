@@ -1,0 +1,40 @@
+ vector<long long int> productExceptSelf(vector<long long int>& nums, int n) {
+       
+        //code here   
+        long long int i,sum=1,flag=0,count=0;
+        vector<long long int>ans;
+        
+        for(i=0;i<n;i++)
+        {
+            if(nums[i]!=0)
+            {
+                sum*=nums[i];
+            }
+            else
+            {
+                flag=1;
+                count++;
+            }
+        }
+        
+        for(i=0;i<n;i++)
+        {
+            if(flag==0)
+            {
+                ans.push_back(sum/nums[i]);
+            }
+            else
+            {
+                if(nums[i]==0 && count==1)
+                {
+                    ans.push_back(sum);
+                }
+                else
+                {
+                    ans.push_back(0);
+                }
+            }
+        }
+        
+        return ans;
+    }

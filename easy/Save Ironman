@@ -1,0 +1,23 @@
+bool saveIronman(string ch)
+{
+    // Complete the function
+    
+    string temp1="";
+    string temp2="";
+    
+    for(int i=0;i<ch.length();i++)
+    {
+        if((ch[i]>=97 && ch[i]<=122) || (ch[i]>=65 && ch[i]<=90))
+        temp1+=tolower(ch[i]);
+        else if(ch[i]>=48 && ch[i]<=57)
+        temp1+=ch[i];
+    }
+    
+    temp2=temp1;
+    reverse(temp1.begin(),temp1.end());
+    
+    if(temp1==temp2)
+    return true;
+    
+    return false;
+}

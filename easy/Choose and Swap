@@ -1,0 +1,43 @@
+string chooseandswap(string a){
+        // Code Here
+        set<char>s;
+        
+        for(int i=0;i<a.length();i++)
+        {
+            s.insert(a[i]);
+        }
+        
+        for(int i=0;i<a.length();i++)
+        {
+            s.erase(a[i]);
+            
+            if(s.size()==0)
+            {
+                return a;
+            }
+            else
+            {
+                if(*s.begin()<a[i])
+                {
+                    char c1=a[i];
+                    char c2=*s.begin();
+                    
+                    for(int j=i;j<a.length();j++)
+                    {
+                        if(a[j]==c1)
+                        {
+                            a[j]=c2;
+                        }
+                        else if(a[j]==c2)
+                        {
+                            a[j]=c1;
+                        }
+                    }
+                    break;
+                }
+            }
+            
+        }
+        
+        return a;
+    }

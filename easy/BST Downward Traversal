@@ -1,0 +1,46 @@
+ Node* findTarget(Node *root,int target)
+    {
+        if(root==NULL)
+            return NULL;
+        if(root->data==target)
+            return root;
+        else if(target<root->data)
+            return findTarget(root->left,target);
+        else
+            return findTarget(root->right,target);
+    
+    }
+    
+    long long int verticallyDownBST(Node *root,int target){
+        // Code here
+        queue<pair<Node*,int>>q;
+        Node* target_location=findTarget(root,target);
+        q.push({target_location,0});
+        
+        if(target_location==NULL)
+            return -1;
+        int res=0;
+        
+        while(!q.empty())
+        {
+            int count=q.size();
+            for(int i=0;i<count;i++)
+            {
+                Node *curr=q.front().first;
+                int hd=q.front().second;
+                q.pop();
+                
+                if(hd==0)
+                res+=curr->data;
+                
+                if(curr->left)
+                q.push({curr->left,hd-1});
+                
+                if(curr->right)
+                q.push({curr->right,hd+1});
+            }
+        }
+        
+        return res-target;
+        
+    }

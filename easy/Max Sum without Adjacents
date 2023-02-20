@@ -1,0 +1,14 @@
+int findMaxSum(int *arr, int n) {
+	    // code here
+	    
+	    vector<int> vp(n,0);
+        vp[0] = arr[0];
+        vp[1] = max(arr[1],arr[0]);
+        
+        for(int i=2;i<n;i++)
+        {
+            vp[i] = max(vp[i-1],arr[i]+vp[i-2]);
+        }
+        
+        return vp[n-1];
+	}

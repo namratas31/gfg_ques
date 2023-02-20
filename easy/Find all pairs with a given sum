@@ -1,0 +1,24 @@
+ vector<pair<int,int>> allPairs(int A[], int B[], int N, int M, int X)
+    {
+        // Your code goes here   
+        vector<pair<int,int>>ans;
+        unordered_map<int,int>mp;
+        int temp;
+        
+        for(int i=0;i<M;i++)
+        {
+            mp[B[i]]++;
+        }
+        
+        sort(A,A+N);
+        
+        for(int i=0;i<N;i++)
+        {
+            temp=X-A[i];
+            
+            if(mp[temp]>0)
+            ans.push_back(make_pair(A[i],temp));
+        }
+        
+        return ans;
+    }

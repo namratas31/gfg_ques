@@ -1,0 +1,31 @@
+bool isAnagram(string a, string b){
+        
+        // Your code here
+        
+        if(a.length()!=b.length())
+        return 0;
+        
+        map<char,int>str1;
+        map<char,int>str2;
+        
+        int i;
+        
+        for(i=0;i<a.length();i++)
+        {
+            str1[a[i]]++;
+        }
+        
+        
+        for(i=0;i<b.length();i++)
+        {
+            str2[b[i]]++;
+        }
+        
+        for(auto i:str1)
+        {
+            if(i.second!=str2[i.first])
+            return 0;
+        }
+        
+        return 1;
+    }

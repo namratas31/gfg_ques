@@ -1,0 +1,35 @@
+vector<int> getStarAndSuperStar(int arr[], int n) {
+    // code here  
+    
+    vector<int>ans;
+    int max=INT_MIN,var,i;
+    
+    for(i=n-1;i>=0;i--)
+    {
+        if(arr[i]>max)
+        {
+            ans.insert(ans.begin(),arr[i]);
+            max=arr[i];
+            var=i;
+        }
+    }
+    
+    for(i=0;i<n;i++)
+    {
+        if(arr[i]==max)
+        {
+            if(i==var)
+            {
+                ans.insert(ans.begin(),max);
+            }
+            else
+            {
+                ans.insert(ans.begin(),-1);
+                break;
+            }
+        }
+    }
+    
+    return ans;
+   
+}

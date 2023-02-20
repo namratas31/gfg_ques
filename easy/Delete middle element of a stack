@@ -1,0 +1,21 @@
+ void solve(stack<int>&s,int n)
+    {
+        if(n==0)
+        {
+            s.pop();
+            return;
+        }
+        else
+        {
+            int temp=s.top();
+            s.pop();
+            solve(s,n-1);
+            s.push(temp);
+        }
+    }
+    
+    void deleteMid(stack<int>&s, int sizeOfStack)
+    {
+        // code here.. 
+        solve(s,sizeOfStack/2);
+    }

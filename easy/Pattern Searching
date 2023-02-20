@@ -1,0 +1,8 @@
+int search(string text, string pat)
+	{
+	    // Your code goes here
+	    if(text.find(pat)!=string::npos)
+	    return 1;
+	    
+	    return 0;
+	}

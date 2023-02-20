@@ -1,0 +1,24 @@
+ int countPairs(struct Node* head1, struct Node* head2, int x) {
+        // Code here
+        
+        unordered_map<int,int>mp;
+        int count=0,temp;
+        
+        while(head1!=NULL)
+        {
+            mp[head1->data]++;
+            head1=head1->next;
+        }
+        
+        while(head2!=NULL)
+        {
+            temp=x-head2->data;
+            
+            if(mp[temp]>0)
+            count++;
+            
+            head2=head2->next;
+        }
+        
+        return count;
+    }

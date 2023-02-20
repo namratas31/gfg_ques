@@ -1,0 +1,11 @@
+int findFrequency(vector<int> v, int x){
+    // Your code here
+    int i,n,count=0;
+    n=v.size();
+    for(i=0;i<n;i++)
+    {
+        if(v[i]==x)
+        count++;
+    }
+    return count;
+}

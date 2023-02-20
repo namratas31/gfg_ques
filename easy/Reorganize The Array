@@ -1,0 +1,24 @@
+int * Rearrange(int *arr,int n){
+    // Complete the function
+    int b[n];
+    
+    for(int i=0;i<n;i++)
+    {
+        b[i]=-1;
+    }
+    
+    for(int i=0;i<n;i++)
+    {
+        if(arr[i]>=0)
+        {
+            b[arr[i]]=arr[i];
+        }
+    }
+    
+    for(int i=0;i<n;i++)
+    {
+        arr[i]=b[i];
+    }
+    
+    return arr;
+}

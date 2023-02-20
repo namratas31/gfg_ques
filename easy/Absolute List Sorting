@@ -1,0 +1,29 @@
+Node* sortList(Node* head)
+    {
+        // Your Code Here
+        Node *temp=head;
+        Node *prev=temp;
+        Node *start;
+        
+        while(temp!=NULL)
+        {
+            if(temp->data<0)
+            {
+                start=temp;
+                prev->next=temp->next;
+                temp=temp->next;
+                if(start!=head)
+                {
+                    start->next=head;
+                    head=start;
+                }
+            }
+            else
+            {
+                prev=temp;
+                temp=temp->next;
+            }
+        }
+        
+        return head;
+    }

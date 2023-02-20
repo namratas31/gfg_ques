@@ -1,0 +1,28 @@
+	string printString(string &S, char ch, int count)
+	{
+	    // Your code goes here
+	    string ans="";
+	    int i;
+	    
+	    for(i=0;i<S.length();i++)
+	    {
+	        if(count==0)
+	        {
+	            break;
+	        }
+	        
+	        if(S[i]==ch)
+	            count--;
+	    }
+	    
+	    while(i<S.length())
+	    {
+	        ans+=S[i];
+	        i++;
+	    }
+	    
+	    if(ans=="")
+	    return "Empty string";
+	    
+	    return ans;
+	}

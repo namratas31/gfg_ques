@@ -1,0 +1,28 @@
+vector<string> winner(string arr[],int n)
+    {
+        // Your code here
+        // Return the string containing the name and an integer
+        // representing the number of votes the winning candidate got
+        map<string,int>mp;
+        int i,max=0,temp;
+        vector<string>v;
+        
+        for(i=0;i<n;i++)
+        {
+            mp[arr[i]]++;
+        }
+        
+        for(auto i:mp)
+        {
+            if(i.second>max)
+            {
+                max=i.second;
+                v.clear();
+                v.push_back(i.first);
+                v.push_back(to_string(i.second));
+            }
+        }
+        
+     return v;
+        
+    }

@@ -1,0 +1,15 @@
+int findFloor(long long int arr[], int N, long long int K) {
+    
+    //Your code here
+    int i,max=-1,count=-1;
+    for(i=0;i<N;i++)
+    {
+        if(arr[i]<=K && arr[i]>max)
+        {
+        max=arr[i];
+        count=i;
+        }
+    }
+   return count;
+    
+}

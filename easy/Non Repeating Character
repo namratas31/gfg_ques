@@ -1,0 +1,19 @@
+char nonrepeatingCharacter(string S)
+    {
+       //Your code here
+       map<char,int>mp;
+       int i;
+       
+       for(i=0;i<S.length();i++)
+       {
+           mp[S[i]]++;
+       }
+       
+       for(i=0;i<S.length();i++)
+       {
+           if(mp[S[i]]==1)
+           return S[i];
+       }
+       
+       return '$';
+    }

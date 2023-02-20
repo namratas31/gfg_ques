@@ -1,0 +1,33 @@
+int findFirstNode(Node* head)
+    {
+        // your code here
+        int flag=0;
+        Node *fast=head;
+        Node *slow=head;
+        Node *temp=head;
+        
+        while(fast!=NULL && fast->next!=NULL)
+        {
+            fast=fast->next->next;
+            slow=slow->next;
+            
+            if(fast==slow)
+            {
+                flag=1;
+                break;
+            }
+        }
+        
+        if(flag==0)
+        {
+            return -1;
+        }
+        
+        while(temp!=slow)
+        {
+            temp=temp->next;
+            slow=slow->next;
+        }
+        
+        return temp->data;
+    }

@@ -1,0 +1,24 @@
+string encode(string src)
+{     
+  //Your code here 
+  map<char,int>mp;
+  string ans="";
+  int i;
+  
+  for(i=0;i<src.length()-1;i++)
+  {
+      mp[src[i]]++;
+      if(src[i+1]!=src[i])
+      {
+          ans+=src[i];
+          ans+=mp[src[i]]+48;
+          mp.erase(src[i]);
+      }
+  }
+  
+  mp[src[i]]++;
+  ans+=src[i];
+  ans+=mp[src[i]]+48;
+  
+  return ans;
+}    

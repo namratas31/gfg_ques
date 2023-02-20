@@ -1,0 +1,23 @@
+char* reverse(char *S, int len)
+{
+    //code here
+    
+    stack<char>ans;
+    int i;
+    
+    for(i=0;i<len;i++)
+    {
+        ans.push(S[i]);
+    }
+    
+    i=0;
+    
+    while(!ans.empty())
+    {
+        S[i]=ans.top();
+        ans.pop();
+        i++;
+    }
+    
+    return S;
+}

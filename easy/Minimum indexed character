@@ -1,0 +1,12 @@
+ int minIndexChar(string str, string patt)
+    {
+        // Your code here
+        int pos;
+        
+        pos=str.find_first_of(patt);
+        
+        if(pos==string::npos)
+        return -1;
+        
+        return pos;
+    }

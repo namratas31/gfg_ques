@@ -1,0 +1,17 @@
+long long int minSum(int arr[], int n)
+    {
+        // Your code goes here
+        long long int val1=0,val2=0,i;
+        sort(arr,arr+n);
+        
+        for(i=0;i<n;i++)
+        {
+            if(i%2==0)
+            val1=val1*10+arr[i];
+            else
+            val2=val2*10+arr[i];
+        }
+        
+        return val1+val2;
+        
+    }

@@ -1,0 +1,26 @@
+int minOperations(int arr[], int n, int k) {
+        // code here
+        int i,var1,var2,count=0;
+        
+        priority_queue<int,vector<int>,greater<int>>pq;
+        
+        for(i=0;i<n;i++)
+        {
+            pq.push(arr[i]);
+        }
+       
+        while(pq.top()<k && pq.size()>1)
+        {
+            var1=pq.top();
+            pq.pop();
+            var2=pq.top();
+            pq.pop();
+            pq.push(var1+var2);
+            count++;
+        }
+        
+        if(pq.top()>=k)
+        return count;
+        
+        return -1;
+    }

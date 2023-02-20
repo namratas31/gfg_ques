@@ -1,0 +1,23 @@
+bool checkPangram (string &str) {
+        // your code here
+        set<char>s;
+        int temp;
+        
+        for(int i=0;i<str.length();i++)
+        {
+            temp=str[i];
+            if(temp>96 && temp<123)
+            {
+                s.insert(str[i]-32);
+            }
+            else if(temp>64 && temp<91)
+            {
+                s.insert(str[i]);
+            }
+        }
+        
+        if(s.size()==26)
+        return 1;
+        
+        return 0;
+    }

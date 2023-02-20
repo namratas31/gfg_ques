@@ -1,0 +1,12 @@
+int minNumber(int arr[], int low, int high)
+{
+    // Your code here
+    int min=arr[0];
+    for(int i=low;i<=high;i++)
+    {
+        if(arr[i]<min)
+        min=arr[i];
+    }
+    return min;
+    
+}

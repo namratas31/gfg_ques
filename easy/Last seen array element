@@ -1,0 +1,22 @@
+ int lastSeenElement(int arr[], int n)
+    {
+        // Complete the function
+        unordered_map<int,int>mp;
+        int i,min=n,val;
+        
+        for(i=0;i<n;i++)
+        {
+            mp[arr[i]]=i;
+        }
+        
+        for(auto i:mp)
+        {
+            if(i.second<min)
+            {
+                min=i.second;
+                val=i.first;
+            }
+        }
+        
+        return val;
+    }
