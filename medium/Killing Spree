@@ -1,0 +1,20 @@
+long long int killinSpree(long long int n)
+    {
+        // Code Here
+        int i=1,count=0;
+        while(1)
+        {
+            n=n-(i*i);
+            i++;
+            count++;
+            if(n<=0)
+            {
+                break;
+            }
+        }
+        
+        if(n<0)
+        count--;
+        
+        return count;
+    }

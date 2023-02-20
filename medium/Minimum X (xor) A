@@ -1,0 +1,30 @@
+int minVal(int a, int b) {
+        // code here
+        
+         int n = __builtin_popcount(b);
+         int m = __builtin_popcount(a);
+         int i = 0;
+        
+        while( n != m )
+        {
+            if( n > m )
+            {
+                if( ( a & ( 1 << i ) ) == 0 )
+                {
+                    a |= ( 1 << i );
+                    n--;
+                }
+            }
+            else
+            {
+                if( ( a & ( 1 << i ) ) > 0 )   
+                {
+                    a &= ~( 1 << i );
+                    m--;
+                }
+            }
+            i++;
+        }
+        
+        return a;
+    }

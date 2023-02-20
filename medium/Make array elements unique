@@ -1,0 +1,21 @@
+long long int minIncrements(vector<int> arr, int N) {
+        // Code here
+        
+        sort(arr.begin(),arr.end());
+        long long int ans=0;
+        int c=arr[0];
+        for(int i=1;i<N;i++)
+        {
+           if(arr[i]<=c)
+            {
+               c++;
+               ans+=(long long)c-(long long)arr[i];
+            }
+           else
+           {
+               c=arr[i];
+           }
+        }
+        
+        return ans;
+    }

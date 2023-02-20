@@ -1,0 +1,18 @@
+int maximum_profit(int n, vector<vector<int>> &intervals) {
+        // Write your code here.
+        
+        int index;
+        vector<int> toFind;
+        
+        sort(intervals.begin(),intervals.end());
+        
+        for(int i=n-2;i>=0;i--)
+        {
+            toFind = {intervals[i][1],INT_MIN,INT_MIN};
+            index = lower_bound(intervals.begin(),intervals.end(),toFind)-intervals.begin();
+            
+            intervals[i][2] = index == n ? max(intervals[i][2],intervals[i+1][2]) : max(intervals[i][2]+intervals[index][2],intervals[i+1][2]);
+        }
+        
+        return intervals[0][2];
+    }

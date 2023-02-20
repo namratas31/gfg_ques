@@ -1,0 +1,13 @@
+int smallestSumSubarray(vector<int>& a){
+      //Code here
+      int sum=0,ans=INT_MAX;
+      
+      for(auto i:a)
+      {
+          sum+=i;
+          sum=min(i,sum);
+          ans=min(ans,sum);
+      }
+      
+      return ans;
+  }

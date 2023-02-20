@@ -1,0 +1,18 @@
+string reverseWords (string s)
+    {
+        //code here.
+        int x=s.length();
+        
+        for(int i=s.length()-1;i>=0;i--)
+        {
+            if(s[i]=='.')
+            {
+                reverse(s.begin()+i+1,s.begin()+x);
+                x=i;
+            }
+        }
+        
+        reverse(s.begin(),s.begin()+x);
+        
+        return s;
+    }

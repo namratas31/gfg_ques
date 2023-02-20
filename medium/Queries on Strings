@@ -1,0 +1,18 @@
+	vector<int>SolveQueris(string str, vector<vector<int>>Query){
+	    // Code here
+	    
+	    vector<int>ans;
+	    set<char>s;
+	    
+	    for(int i=0;i<Query.size();i++)
+	    {
+	        for(int j=Query[i][0];j<=Query[i][1];j++)
+	        {
+	            s.insert(str[j-1]);
+	        }
+	        ans.push_back(s.size());
+	        s.clear();
+	    }
+	    
+	    return ans;
+	}

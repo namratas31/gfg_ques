@@ -1,0 +1,25 @@
+bool isPalindrome(Node *head)
+    {
+        //Your code here
+        string s="",t="";
+        stack<string>st;
+        Node *temp=head;
+        
+        while(temp!=NULL)
+        {
+            s+=to_string(temp->data);
+            st.push(to_string(temp->data));
+            temp=temp->next;
+        }
+        
+        while(!st.empty())
+        {
+            t+=st.top();
+            st.pop();
+        }
+        
+        if(s==t)
+        return true;
+        
+        return false;
+    }

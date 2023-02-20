@@ -1,0 +1,20 @@
+vector<vector<string> > Anagrams(vector<string>& string_list) {
+        //code here
+        map<string,vector<string>>mp;
+        vector<vector<string>>ans;
+        string var="";
+        
+        for(int i=0;i<string_list.size();i++)
+        {
+            var=string_list[i];
+            sort(string_list[i].begin(),string_list[i].end());
+            mp[string_list[i]].push_back(var);
+        }
+        
+        for(auto i:mp)
+        {
+            ans.push_back(i.second);
+        }
+        
+        return ans;
+    }

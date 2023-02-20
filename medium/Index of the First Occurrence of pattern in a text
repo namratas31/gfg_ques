@@ -1,0 +1,13 @@
+int findMatching(string text, string pat) {
+        // Code here
+        
+        for(int i=0;i<=text.length();i++)
+        {
+            if(pat==text.substr(i,pat.length()))
+            {
+                return i;
+            }
+        }
+        
+        return -1;
+    }

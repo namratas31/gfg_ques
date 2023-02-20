@@ -1,0 +1,27 @@
+string preToInfix(string pre_exp) {
+        // Write your code here
+        string ans="";
+        stack<string>s;
+        
+        for(int i=pre_exp.length()-1;i>=0;i--)
+        {
+            if(pre_exp[i]=='*' || pre_exp[i]=='/' || pre_exp[i]=='-' || pre_exp[i]=='+')
+            {
+                ans+="(";
+                ans+=s.top();
+                s.pop();
+                ans+=pre_exp[i];
+                ans+=s.top();
+                s.pop();
+                ans+=")";
+                s.push(ans);
+                ans="";
+            }
+            else
+            {
+                s.push(string(1,pre_exp[i]));
+            }
+        }
+        
+        return s.top();
+    }

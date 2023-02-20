@@ -1,0 +1,15 @@
+int minCost(vector<vector<int>> &colors, int N) {
+        // Write your code here.
+        
+        int Ai = colors[0][0], Bi = colors[0][1], Ci = colors[0][2];
+        
+        for(int i = 1; i< N; i++)
+        {
+            int t1 = colors[i][0] + min(Bi, Ci);
+            int t2 = colors[i][1] + min(Ai, Ci);
+            int t3 = colors[i][2] + min(Bi, Ai);
+            Ai = t1, Bi = t2, Ci = t3;
+        }
+        
+        return min({Ai, Bi, Ci});
+    }

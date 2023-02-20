@@ -1,0 +1,25 @@
+string preToPost(string pre_exp) {
+        
+        stack<string>s;
+        string ans="",temp="";
+        
+        for(int i=pre_exp.length()-1;i>=0;i--)
+        {
+            if((pre_exp[i]>=65 && pre_exp[i]<=90) || (pre_exp[i]>=97 && pre_exp[i]<=122))
+            {
+                s.push(string(1,pre_exp[i]));
+            }
+            else
+            {
+                ans+=s.top();
+                s.pop();
+                ans+=s.top();
+                s.pop();
+                ans+=pre_exp[i];
+                s.push(ans);
+                ans="";
+            }
+        }
+        
+        return s.top();
+    }

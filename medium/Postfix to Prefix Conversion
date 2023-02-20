@@ -1,0 +1,28 @@
+string postToPre(string post_exp) {
+        // Write your code here
+        stack<string>ans;
+        string temp1="",temp2="";
+        
+        for(int i=0;i<post_exp.length();i++)
+        {
+            if((post_exp[i]>=65 && post_exp[i]<=90) || (post_exp[i]>=97 && post_exp[i]<=122))
+            {
+               ans.push(string(1,post_exp[i])); 
+            }
+            else
+            {
+                temp1+=post_exp[i];
+                temp2+=ans.top();
+                ans.pop();
+                temp1+=ans.top();
+                temp1+=temp2;
+                ans.pop();
+                ans.push(temp1);
+                temp1="";
+                temp2="";
+            }
+        }
+        
+        return ans.top();
+    }
+};
