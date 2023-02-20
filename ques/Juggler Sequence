@@ -1,0 +1,23 @@
+vector<int> jugglerSequence(int N){
+        // code here
+        long long i=N;
+        vector<int>ans;
+        
+        ans.push_back(i);
+        
+        while(i>1)
+        {
+            if(i%2==0)
+            {
+                i=pow(i,0.5);
+            }
+            else
+            {
+                i=pow(i,3);
+                i=pow(i,0.5);
+            }
+            ans.push_back(i);
+        }
+        
+        return ans;
+    }

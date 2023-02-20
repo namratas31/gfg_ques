@@ -1,0 +1,17 @@
+int findPosition(int N) {
+        // code here
+        int pos=0;
+        
+        if(__builtin_popcount(N)==1)
+        {
+            while(N!=0)
+            {
+                pos++;
+                N=N/2;
+            }
+            
+            return pos;
+        }
+        
+        return -1;
+    }

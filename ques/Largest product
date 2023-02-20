@@ -1,0 +1,25 @@
+long long findMaxProduct(int A[], int n, int k)
+{
+//Your code here
+    long long res,i,prod=1;
+    
+    for(i=0;i<k;i++)
+    {
+        prod*=A[i];
+    }
+    
+    res=prod;
+    
+    for(i=0;k<n;i++)
+    {
+        prod/=A[i];
+        prod*=A[k];
+        
+        if(prod>res)
+        res=prod;
+        
+        k++;
+    }
+    
+    return res;
+}

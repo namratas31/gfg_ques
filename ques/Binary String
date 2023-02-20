@@ -1,0 +1,19 @@
+long binarySubstring(int n, string a){
+        
+        // Your code here
+        long count=0,i;
+        
+        for(i=0;i<a.length();i++)
+        {
+            if(a[i]=='1')
+            count++;
+        }
+        
+        if(count>1)
+        {
+            return count*(count-1)/2;
+        }
+        else
+        return 0;
+        
+    }

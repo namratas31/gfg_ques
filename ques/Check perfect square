@@ -1,0 +1,9 @@
+long long int isPerfectSquare(long long int n){
+        // code here
+        int k=pow(n,0.5);
+        
+        if(k*k==n)
+        return 1;
+        else
+        return 0;
+    }

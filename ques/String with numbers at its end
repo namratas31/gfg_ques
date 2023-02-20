@@ -1,0 +1,26 @@
+int isSame(string s)
+	{
+	    // Your code goes here
+	    int i=s.length()-1;
+	    int sum=0,j=0;
+	    
+	    while(i>=0)
+	    {
+	        if(isdigit(s[i]))
+	        {
+	            sum+=(s[i]-48)*pow(10,j);
+	            j++;
+	        }
+	        else
+	        {
+	            break;
+	        }
+	        i--;
+	    }
+	    
+	    if(sum==i+1)
+	    return 1;
+	    else
+	    return 0;
+	    
+	}

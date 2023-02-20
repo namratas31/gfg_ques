@@ -1,0 +1,25 @@
+ Node *pre = nullptr, *first = nullptr, *second = nullptr;
+  
+  void inorder(Node *root){
+      if(!root) return;
+      
+      inorder(root->left);
+      if(pre!=NULL and root->data <= pre->data){
+          if(!first){
+              first = pre;
+          }
+          second = root;
+      }
+      pre = root;
+      inorder(root->right);
+      
+  }
+  
+    struct Node *correctBST(struct Node *root) {
+        // code here
+        inorder(root);
+        swap(first->data,second->data);
+        
+        return root;
+
+    }

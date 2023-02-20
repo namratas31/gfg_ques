@@ -1,0 +1,33 @@
+vector<int> arranged(int a[],int n)
+    {
+        
+    vector<int> ans;
+    int pos[n/2],neg[n/2],i,j=0,k=0;
+    
+    for(i=0;i<n;i++)
+    {
+        if(a[i]>=0)
+        {
+            pos[j]=a[i];
+            j++;
+        }
+        else
+        {
+            neg[k]=a[i];
+            k++;
+        }
+    }
+    
+    j=0;
+    k=0;
+    
+    for(i=0;i<n/2;i++)
+    {
+        ans.push_back(pos[j]);
+        ans.push_back(neg[k]);
+        j++;
+        k++;
+    }
+    
+    return ans;
+    }

@@ -1,0 +1,26 @@
+int divisibleBy4 (string N)
+	{
+	    // Your Code Here
+	    int x=N.length();
+	    int y,z;
+	    
+	    if(x==1)
+	    {
+	        if((N[x-1]-48)%4==0)
+	        return 1;
+	        else
+	        return 0;
+	    }
+	    else
+	    {
+	        y=N[x-1]-48;
+	        z=(N[x-2]-48)*10;
+	        y=y+z;
+	        
+	        if(y%4==0)
+	        return 1;
+	        else
+	        return 0;
+	    }
+	    
+	}

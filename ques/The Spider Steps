@@ -1,0 +1,13 @@
+int minStep(int H, int U, int D){
+        // code here
+        int sum=0,count=0;
+        
+        while(sum<H)
+        {
+            sum+=U;
+            count++;
+            if(sum>H)
+            return count;
+            sum-=D;
+        }
+    }

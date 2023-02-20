@@ -1,0 +1,26 @@
+int strstr(string s, string x)
+{
+     //Your code here
+     int j=0,minn=0,i,k;
+     
+     for(i=0;i<s.length();i++)
+     {
+         k=i;
+         while(j<x.length() && s[k]==x[j])
+         {
+            j++;
+            k++;
+         }
+         
+         if(j==x.length())
+         {
+            return i;
+         }
+         else
+         {
+             j=0;
+         }
+     }
+     
+     return -1;
+}

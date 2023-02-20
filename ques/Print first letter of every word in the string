@@ -1,0 +1,18 @@
+	string firstAlphabet(string S)
+	{
+	    // Your code goes here
+	    string k="";
+
+	    k.push_back(S[0]);
+	   
+	   int i=1;
+	   while(S[i]!='\0')
+	    {
+	        if(S[i]==' ')
+	        {
+	            k.push_back(S[i+1]);
+	        }
+	        i++;
+	    }
+	    return k;
+	}

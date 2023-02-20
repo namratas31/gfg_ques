@@ -1,0 +1,19 @@
+int findIndex(int arr[], int X, int Y, int N)
+{
+    // Your code goes here
+    int i,count1=0,count2=0,pos=-1;
+    
+    for(i=0;i<N;i++)
+    {
+        if(arr[i]==X)
+        count1++;
+        
+        if(arr[i]==Y)
+        count2++;
+        
+        if(count1!=0 && count2!=0 && count1==count2)
+        pos=i;
+    }
+    
+    return pos;
+}

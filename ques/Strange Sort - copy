@@ -1,0 +1,15 @@
+void strangeSort (int arr[], int n, int k)
+            {
+            	//code here.
+                int temp=arr[k-1];
+                arr[k-1]=INT_MAX;
+                sort(arr,arr+n);
+                
+                for(int i=n-1;i>=k-1;i--)
+                {
+                    arr[i+1]=arr[i];
+                }
+                
+                arr[k-1]=temp;
+            	
+            }

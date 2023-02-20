@@ -1,0 +1,19 @@
+int Maximize(int a[],int n)
+    {
+        // Complete the function
+        long long int i,count=0;
+        
+        sort(a,a+n);
+        
+        for(i=0;i<n;i++)
+        {
+            count+=a[i]*i;
+        }
+        
+        long long int x=pow(10,9);
+        x+=7;
+        
+        count=count%x;
+        
+        return count;
+    }
