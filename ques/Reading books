@@ -1,0 +1,16 @@
+long long maxPoint(int N, int K, long long A[], long long B[])
+    {
+        // code here
+        long long i,count=0,sum=0,max=0;
+        
+        for(i=0;i<N;i++)
+        {
+            count=K/A[i];
+            sum=count*B[i];
+            
+            if(sum>max)
+            max=sum;
+        }
+        
+        return max;
+    }

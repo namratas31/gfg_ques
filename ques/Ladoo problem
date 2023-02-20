@@ -1,0 +1,12 @@
+ int divideLadoo(int N ,int A[]) {
+        // code here
+        set<int>s;
+        int i;
+        
+        for(i=0;i<N;i++)
+        {
+            s.insert(A[i]);
+        }
+           
+        return s.size(); 
+    }

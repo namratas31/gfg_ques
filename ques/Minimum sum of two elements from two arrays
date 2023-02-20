@@ -1,0 +1,41 @@
+ int minSum(int a[], int b[], int n) 
+    {
+        int i,mina1=INT_MAX,loc2,loc1,loc3,loc4,minb1=INT_MAX,mina2=INT_MAX,minb2=INT_MAX;
+        
+        for(i=0;i<n;i++)
+        {
+            if(a[i]<mina1)
+            {
+                mina2=mina1;
+                loc2=loc1;
+                mina1=a[i];
+                loc1=i;
+            }
+            else if(a[i]<mina2)
+            {
+                mina2=a[i];
+                loc2=i;
+            }
+        }
+        
+        for(i=0;i<n;i++)
+        {
+            if(b[i]<minb1)
+            {
+                minb2=minb1;
+                loc4=loc3;
+                minb1=b[i];
+                loc3=i;
+            }
+            else if(b[i]<minb2)
+            {
+                minb2=b[i];
+                loc4=i;
+            }
+        }
+        
+        if(loc1!=loc3)
+        return mina1+minb1;
+        else
+        return min((mina2+minb1),(mina1+minb2));
+    } 

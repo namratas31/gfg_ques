@@ -1,0 +1,21 @@
+	string Play(vector<int>nums, int k)
+	{
+	    // Code here
+	    int sum=0,count=0;
+	    
+	    for(auto i:nums)
+	    {
+	        count=0;
+	       while(i!=0)
+	       {
+	           i=i/k;
+	           count++;
+	       }
+	       sum+=count;
+	    }
+	    
+	    if(sum%2==0)
+	    return "Friend";
+	    else
+	    return "Akash";
+	}

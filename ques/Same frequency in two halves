@@ -1,0 +1,30 @@
+ bool passed (string s) {
+        //code here.
+        int i;
+        map<char,int>ans;
+        
+        for(i=0;i<s.length()/2;i++)
+        {
+            ans[s[i]]++;
+        }
+        
+        if(s.length()%2!=0)
+        {
+            i++;
+        }
+        
+        for(;i<s.length();i++)
+        {
+            ans[s[i]]--;
+        }
+        
+        for(auto i:ans)
+        {
+            if(i.second<0 || i.second>0)
+            {
+                return 0;
+            }
+        }
+        
+        return 1;
+    }

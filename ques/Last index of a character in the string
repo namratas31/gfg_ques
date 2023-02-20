@@ -1,0 +1,14 @@
+int LastIndex(string s, char p){
+        //complete the function here
+        int x=s.length();
+        int i=x-1;
+        
+        while(i>=0)
+        {
+            if(s[i]==p)
+            return i;
+            i--;
+        }
+        
+        return -1;
+    }

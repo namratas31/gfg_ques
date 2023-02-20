@@ -1,0 +1,14 @@
+string encodeTheName(string S) {
+        // code here
+        int x,i,count=10;
+        string ans;
+        
+        for(i=0;i<S.length();i++)
+        {
+            x=S[i]-count;
+            ans+=to_string(x);
+            count--;
+        }
+        
+        return ans;
+    }

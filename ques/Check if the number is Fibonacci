@@ -1,0 +1,14 @@
+string checkFibonacci(int N){
+        // code here 
+        int x,y;
+        
+        x=pow((5*N*N+4),0.5);
+        if(x*x==5*N*N+4)
+        return "Yes";
+        
+        y=pow((5*N*N-4),0.5);
+        if(y*y==5*N*N-4)
+        return "Yes";
+        
+        return "No";
+    }

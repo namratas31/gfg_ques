@@ -1,0 +1,14 @@
+int remainderWith7(string n)
+    {
+        //Your code here
+        int ans=0,i;
+        
+        for(i=0;i<n.length();i++)
+        {
+            ans=ans*10+(n[i]-48);
+            ans=ans%7;
+        }
+        
+        return ans;
+        
+    }

@@ -1,0 +1,21 @@
+vector<int> alternateSort(int arr[], int N)
+	{
+	    // Your code goes here
+	    sort(arr,arr+N);
+	    int i=0,j=N-1;
+	    vector<int>a;
+	    
+	    while(i<j)
+	    {
+	        a.push_back(arr[j]);
+	        j--;
+	        
+	        a.push_back(arr[i]);
+	        i++;
+	    }
+	    
+	    if(i==j)
+	    a.push_back(arr[i]);
+	    
+	    return a;
+	}

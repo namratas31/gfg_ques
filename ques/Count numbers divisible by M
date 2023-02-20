@@ -1,0 +1,14 @@
+int countDivisibles(int A, int B, int M) {
+        // code here
+        int i,j,k,m;
+        i=A/M;
+        j=B/M;
+        m=A%M;
+        
+        if(m==0)
+        k=j-i+1;
+        else
+        k=j-i;
+        
+        return k;
+    }

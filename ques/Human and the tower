@@ -1,0 +1,12 @@
+int findHeightOrDistance(char type, double value, double angle) {
+        // code here
+        if(type=='d')
+        {
+            return value*tan(angle*3.14/180.0);
+        }
+        else
+        {
+            return (value)/tan(angle*3.14/180.0);
+        }
+        
+    }

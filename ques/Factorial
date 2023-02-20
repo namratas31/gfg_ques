@@ -1,0 +1,12 @@
+long long int factorial(int N){
+       //code here
+       int i;
+       long long int fact=1;
+       
+       for(i=2;i<=N;i++)
+       {
+           fact=fact*i;
+       }
+       
+       return fact;
+}
