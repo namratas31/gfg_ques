@@ -1,7 +1,0 @@
-long long handShakes(int N){
-        // code here
-        long long x;
-        x=N;
-        
-        return ((x-1)*x)/2;;
-    }

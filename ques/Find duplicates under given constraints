@@ -1,8 +1,0 @@
-int findDuplicate(int A[])
-{
-    // Your code goes here
-    if(A[3]==A[4])
-    return A[4];
-    
-    return A[5];
-}

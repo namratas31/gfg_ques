@@ -1,7 +1,0 @@
-string canJump(long long N) {
-        // code here
-        if(ceil(log2(N))==floor(log2(N)))
-        return "True";
-        
-        return "False";
-    }
