@@ -1,0 +1,37 @@
+int checkCompressed(string S, string T) {
+        // code here
+        
+        int n = S.length(), m = T.length();
+        int i = 0, j = 0, num = 0;
+        
+        for(int i = 0; i<m; ++i)
+        {
+            if(T[i]>='0' && T[i]<='9')
+            {
+                num *= 10;
+                num += T[i]-'0';
+            }
+            else
+            {
+                if(j+num >= n) 
+                {
+                    return 0;
+                }
+                else 
+                {
+                    j += num;
+                    num = 0;
+                }
+                    
+                if(S[j] != T[i])
+                    return 0;
+                    
+                ++j;
+            }
+        }
+        
+        if(j+num != n) 
+            return 0;
+            
+        return 1;
+    }
