@@ -1,0 +1,29 @@
+void printTriangle(int n) {
+        // code here
+        
+        int k=1;
+        
+        for(int i=1;i<=n;i++)
+        {
+            k=1;
+            for(int j=1;j<=i;j++)
+            {
+                cout<<k<<" ";
+                k++;
+            }
+            
+            for(int j=1;j<=4*n-4*i;j++)
+            {
+                cout<<" ";
+            }
+            
+            k--;
+            for(int j=1;j<=i;j++)
+            {
+                cout<<k<<" ";
+                k--;
+            }
+            
+            cout<<endl;
+        }
+    }
