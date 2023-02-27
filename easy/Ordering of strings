@@ -1,0 +1,13 @@
+vector<string> orderString(string s[], int n)
+    {
+    	//code here.
+    	sort(s,s+n);
+    	
+    	vector<string>ans;
+    	
+    	ans.push_back(s[0]);
+    	ans.push_back(s[n-1]);
+    	
+    	return ans;
+    }
+    
