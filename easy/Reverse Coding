@@ -1,0 +1,14 @@
+int revCoding(int n, int m) {
+        // code here
+        int ans=0;
+        
+        for(int i=1;i<=n;i++)
+        {
+            ans+=i;
+        }
+        
+        if(ans==m)
+        return 1;
+        
+        return 0;
+    }
