@@ -1,0 +1,9 @@
+string computeParity(int N) {
+        // code here
+        if((__builtin_popcount(N))%2==0)
+        {
+            return "even";
+        }
+        
+        return "odd";
+    }
