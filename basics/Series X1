@@ -1,0 +1,8 @@
+long long X1Series(int X)
+    {
+        // Write Your Code here
+        long long val;
+        val=pow(X,3);
+        
+        return  val+X;
+    }
