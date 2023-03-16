@@ -1,0 +1,19 @@
+int evenFactors(int N){
+        // code here
+        int count=0;
+     
+        for(int i=2;i<N;i++)
+        {
+            if(N%i==0 && i%2==0)
+            {
+                count+=i;
+            }
+        }
+        
+        if(N%2==0)
+        {
+            count+=N;
+        }
+        
+        return count;
+    }
