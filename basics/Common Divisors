@@ -1,0 +1,15 @@
+ long long int commDiv(long long int a,long long int b) {
+        // code here
+        long long int k=min(a,b);
+        long long int count=1;
+        
+        for(int i=2;i<=k;i++)
+        {
+            if(a%i==0 && b%i==0)
+            {
+                count++;
+            }
+        }
+        
+        return count;
+    }
