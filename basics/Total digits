@@ -1,0 +1,12 @@
+ long long int totalDigits(long long int n){
+        // code here
+        
+        long long int count=0;
+        
+        for(int i=1;i<=n;i++)
+        {
+            count+=log10(i)+1;
+        }
+        
+        return count;
+    }
