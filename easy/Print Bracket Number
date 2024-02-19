@@ -1,0 +1,25 @@
+vector<int> bracketNumbers(string S)
+	{
+	    // Your code goes here
+	    int count=0;
+	    stack<int>s;
+	    vector<int>ans;
+	    
+	    for(int i=0;i<S.length();i++)
+	    {
+	        if(S[i]=='(')
+	        {
+	            count++;
+	            s.push(count);
+	            ans.push_back(count);
+	        }
+	        
+	        if(S[i]==')')
+	        {
+	            ans.push_back(s.top());
+	            s.pop();
+	        }
+	    }
+	    
+	    return ans;
+	}
