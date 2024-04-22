@@ -1,0 +1,26 @@
+int minRow(int n, int m, vector<vector<int>> a) {
+        // code here
+        int count=0,ind=0,minn=INT_MAX;
+        
+        for(int i=0;i<n;i++)
+        {
+            for(int j=0;j<m;j++)
+            {
+                if(a[i][j]==1)
+                {
+                    count++;
+                }
+            }
+            
+            if(count<minn)
+            {
+                ind=i+1;
+                minn=count;
+            }
+            
+            count=0;
+        }
+        
+        return ind;
+    }
+};
