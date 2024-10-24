@@ -1,0 +1,24 @@
+bool PalinArray(vector<int> &arr) {
+        // code here
+        
+        string temp="";
+        string rev="";
+        
+        for(auto i:arr)
+        {
+            temp=to_string(i);
+            rev=temp;
+            reverse(temp.begin(),temp.end());
+            
+            if(temp==rev)
+            {
+                continue;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        
+        return true;
+    }
