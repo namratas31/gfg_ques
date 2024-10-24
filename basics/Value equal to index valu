@@ -1,0 +1,16 @@
+vector<int> valueEqualToIndex(vector<int>& arr) {
+        // code here
+        vector<int>ans;
+        int val=1;
+        
+        for(auto i:arr)
+        {
+            if(val==i)
+            {
+                ans.push_back(i);
+            }
+            val++;
+        }
+        
+        return ans;
+    }
